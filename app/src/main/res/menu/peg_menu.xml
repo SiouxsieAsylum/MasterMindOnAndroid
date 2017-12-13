@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id = "@+id/b"
+        android:icon="@drawable/bluepegfiller"
+        android:tag="@drawable/bluepegfiller"
+        android:title="blue_peg"/>
+
+    <item
+        android:id = "@+id/p"
+        android:icon="@drawable/purplepegfiller"
+        android:tag="@drawable/purplepegfiller"
+        android:title="purple_peg"/>
+
+    <item
+        android:id = "@+id/r"
+        android:icon="@drawable/redpegfiller"
+        android:tag="@drawable/redpegfiller"
+        android:title="red_peg"
+        />
+
+    <item
+        android:id = "@+id/o"
+        android:icon="@drawable/orangepegfiller"
+        android:tag="@drawable/orangepegfiller"
+        android:title="orange_peg"/>
+
+    <item
+        android:id = "@+id/y"
+        android:icon="@drawable/yellowpegfiller"
+        android:tag="@drawable/yellowpegfiller"
+        android:title="yellow_peg"/>
+
+    <item
+        android:id = "@+id/g"
+        android:icon="@drawable/greenpegfiller"
+        android:tag="@drawable/greenpegfiller"
+        android:title="green_peg" />
+
+    </menu>

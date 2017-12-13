@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mcken.mastermind.MainActivity"
+    android:background="@drawable/mastermindboard">
+
+
+    <!--First Row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="@dimen/linear_layout_width"
+        android:layout_height="15dp"
+        android:id="@+id/firstRow"
+        android:layout_marginTop="119dp"
+        android:layout_centerHorizontal="true"
+        android:focusable = "true"
+        android:nextFocusDown="@+id/secondRow"
+        >
+
+        <requestFocus/>
+
+        <ImageView
+            android:id="@+id/rowOnePegOne"
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="pegSelect"
+            />
+
+
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:layout_marginLeft="@dimen/row_one_padding"
+            android:layout_marginStart="@dimen/row_one_padding"
+            android:id="@+id/rowOnePegTwo" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/RowOnePegThree"
+            android:layout_marginLeft="@dimen/row_one_padding"
+            android:layout_marginStart="@dimen/row_one_padding" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowOnePegFour"
+            android:layout_marginLeft="@dimen/row_one_padding"
+            android:layout_marginStart="@dimen/row_one_padding" />
+
+        <GridLayout
+            android:layout_width = "15dp"
+            android:layout_height = "15dp"
+            android:rowCount = "2"
+            android:columnCount = "2"
+            android:id = "@+id/firstGrid">
+
+        </GridLayout>
+
+    </LinearLayout>
+
+
+
+
+    <!--Second Row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="@dimen/linear_layout_width"
+        android:layout_height="15dp"
+        android:id="@id/secondRow"
+        android:layout_marginTop="145dp"
+        android:layout_centerHorizontal="true"
+        android:focusable = "true"
+        android:nextFocusDown="@+id/thirdRow">
+
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowTwoPegOne"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:layout_marginLeft="@dimen/row_two_padding"
+            android:layout_marginStart="@dimen/row_two_padding"
+            android:id="@+id/rowTwoPegTwo" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/RowTwoPegThree"
+            android:layout_marginStart="@dimen/row_two_padding"
+            android:layout_marginLeft="@dimen/row_two_padding" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowTwoPegFour"
+            android:layout_marginStart="@dimen/row_two_padding"
+            android:layout_marginLeft="@dimen/row_two_padding" />
+
+        <GridLayout
+            android:layout_width = "15dp"
+            android:layout_height = "15dp"
+            android:rowCount = "2"
+            android:columnCount = "2"
+            android:id = "@+id/secondGrid">
+
+        </GridLayout>
+    </LinearLayout>
+
+    <!--Third Row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="@dimen/linear_layout_width"
+        android:layout_height="15dp"
+        android:id="@id/thirdRow"
+        android:layout_marginTop="165dp"
+        android:layout_centerHorizontal="true"
+        android:focusable = "true"
+        android:nextFocusDown="@+id/fourthRow">
+
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowThreePegOne"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:layout_marginLeft="@dimen/row_three_padding"
+            android:layout_marginStart="@dimen/row_three_padding"
+            android:id="@+id/rowThreePegTwo" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/RowThreePegThree"
+            android:layout_marginLeft="@dimen/row_three_padding"
+            android:layout_marginStart="@dimen/row_three_padding" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowThreePegFour"
+            android:layout_marginLeft="@dimen/row_three_padding"
+            android:layout_marginStart="@dimen/row_three_padding" />
+
+        <GridLayout
+            android:layout_width = "15dp"
+            android:layout_height = "15dp"
+            android:rowCount = "2"
+            android:columnCount = "2"
+            android:id = "@+id/thirdGrid">
+
+        </GridLayout>
+    </LinearLayout>
+
+    <!--Fourth Row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="@dimen/linear_layout_width"
+        android:layout_height="15dp"
+        android:id="@id/fourthRow"
+        android:layout_marginTop="185dp"
+        android:layout_centerHorizontal="true"
+        android:focusable = "true"
+        android:nextFocusDown="@+id/fifthRow">
+
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowFourPegOne"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:layout_marginLeft="@dimen/row_four_padding"
+            android:layout_marginStart="@dimen/row_four_padding"
+            android:id="@+id/rowFourPegTwo"/>
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/RowFourPegThree"
+            android:layout_marginLeft="@dimen/row_four_padding"
+            android:layout_marginStart="@dimen/row_four_padding" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowFourPegFour"
+            android:layout_marginLeft="@dimen/row_four_padding"
+            android:layout_marginStart="@dimen/row_four_padding" />
+
+        <GridLayout
+            android:layout_width = "15dp"
+            android:layout_height = "15dp"
+            android:rowCount = "2"
+            android:columnCount = "2"
+            android:id = "@+id/fourthGrid">
+
+        </GridLayout>
+    </LinearLayout>
+
+    <!--Fifth Row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="15dp"
+        android:id="@id/fifthRow"
+        android:layout_marginTop="205dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/linear_layout_width"
+        android:focusable = "true"
+        android:nextFocusDown="@+id/sixthRow">
+
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowFivePegOne"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:layout_marginLeft="@dimen/row_five_padding"
+            android:layout_marginStart="@dimen/row_five_padding"
+            android:id="@+id/rowFivePegTwo"
+            android:onClick="pegSelect" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowFivePegThree"
+            android:layout_marginLeft="@dimen/row_five_padding"
+            android:layout_marginStart="@dimen/row_five_padding" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowFivePegFour"
+            android:layout_marginLeft="@dimen/row_five_padding"
+            android:layout_marginStart="@dimen/row_five_padding" />
+
+        <GridLayout
+            android:layout_width = "15dp"
+            android:layout_height = "15dp"
+            android:rowCount = "2"
+            android:columnCount = "2"
+            android:id = "@+id/fifthGrid">
+
+        </GridLayout>
+    </LinearLayout>
+
+    <!--Sixth Row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="15dp"
+        android:id="@id/sixthRow"
+        android:layout_marginTop="225dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/linear_layout_width"
+        android:focusable = "true"
+        android:nextFocusDown="@+id/seventhRow">
+
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowSixPegOne"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp" />
+
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:layout_marginLeft="@dimen/row_six_padding"
+            android:layout_marginStart="@dimen/row_six_padding"
+            android:id="@+id/rowSixPegTwo" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowSixPegThree"
+            android:layout_marginLeft="@dimen/row_six_padding"
+            android:layout_marginStart="@dimen/row_six_padding" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowSixPegFour"
+            android:layout_marginLeft="@dimen/row_six_padding"
+            android:layout_marginStart="@dimen/row_six_padding" />
+
+        <GridLayout
+            android:layout_width = "15dp"
+            android:layout_height = "15dp"
+            android:rowCount = "2"
+            android:columnCount = "2"
+            android:id = "@+id/sixthGrid">
+
+        </GridLayout>
+    </LinearLayout>
+
+    <!--Seventh Row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="15dp"
+        android:id="@id/seventhRow"
+        android:layout_marginTop="245dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/linear_layout_width"
+        android:focusable = "true"
+        android:nextFocusDown="@+id/eighthRow">
+
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowSevenPegOne"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:layout_marginLeft="@dimen/row_seven_padding"
+            android:layout_marginStart="@dimen/row_seven_padding"
+            android:id="@+id/rowSevenPegTwo" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/RowSevenPegThree"
+            android:layout_marginLeft="@dimen/row_seven_padding"
+            android:layout_marginStart="@dimen/row_seven_padding" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowSevenPegFour"
+            android:layout_marginLeft="@dimen/row_seven_padding"
+            android:layout_marginStart="@dimen/row_seven_padding" />
+
+        <GridLayout
+            android:layout_width = "15dp"
+            android:layout_height = "15dp"
+            android:rowCount = "2"
+            android:columnCount = "2"
+            android:id = "@+id/seventhGrid">
+
+        </GridLayout>
+    </LinearLayout>
+
+    <!--Eighth Row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="15dp"
+        android:id="@id/eighthRow"
+        android:layout_marginTop="265dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/linear_layout_width"
+        android:focusable = "true"
+        android:nextFocusDown="@+id/ninthRow">
+
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowEightPegOne"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:layout_marginLeft="@dimen/row_eight_padding"
+            android:layout_marginStart="@dimen/row_eight_padding"
+            android:id="@+id/rowEightPegTwo"/>
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/RowEightPegThree"
+            android:layout_marginLeft="@dimen/row_eight_padding"
+            android:layout_marginStart="@dimen/row_eight_padding" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowEightPegFour"
+            android:layout_marginLeft="@dimen/row_eight_padding"
+            android:layout_marginStart="@dimen/row_eight_padding"/>
+
+        <GridLayout
+            android:layout_width = "15dp"
+            android:layout_height = "15dp"
+            android:rowCount = "2"
+            android:columnCount = "2"
+            android:id = "@+id/eigthGrid">
+
+        </GridLayout>
+    </LinearLayout>
+
+    <!--Ninth Row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="15dp"
+        android:id="@id/ninthRow"
+        android:layout_marginTop="285dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/linear_layout_width"
+        android:focusable = "true"
+        android:nextFocusDown="@+id/tenthRow">
+
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowNinePegOne"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:layout_marginLeft="@dimen/row_nine_padding"
+            android:layout_marginStart="@dimen/row_nine_padding"
+            android:id="@+id/rowNinePegTwo" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/RowNinePegThree"
+            android:layout_marginLeft="@dimen/row_nine_padding"
+            android:layout_marginStart="@dimen/row_nine_padding" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowNinePegFour"
+            android:layout_marginLeft="@dimen/row_nine_padding"
+            android:layout_marginStart="@dimen/row_nine_padding" />
+
+        <GridLayout
+            android:layout_width = "15dp"
+            android:layout_height = "15dp"
+            android:rowCount = "2"
+            android:columnCount = "2"
+            android:id = "@+id/ninthGrid">
+
+        </GridLayout>
+    </LinearLayout>
+
+    <!--Tenth row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="15dp"
+        android:id="@id/tenthRow"
+        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/linear_layout_width"
+        android:focusable = "true">
+
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowTenPegOne"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:layout_marginLeft="@dimen/row_ten_padding"
+            android:layout_marginStart="@dimen/row_ten_padding"
+            android:id="@+id/rowTenPegTwo" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/RowTenPegThree"
+            android:layout_marginLeft="@dimen/row_ten_padding"
+            android:layout_marginStart="@dimen/row_ten_padding" />
+        <ImageView
+            android:layout_width="@dimen/image_view_size"
+            android:layout_height="@dimen/image_view_size"
+            android:id="@+id/rowTenPegFour"
+            android:layout_marginLeft="@dimen/row_ten_padding"
+            android:layout_marginStart="@dimen/row_ten_padding" />
+        <GridLayout
+            android:layout_width = "15dp"
+            android:layout_height = "15dp"
+            android:rowCount = "2"
+            android:columnCount = "2"
+            android:id = "@+id/tenthGrid">
+
+        </GridLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_height = "50dp"
+        android:layout_width = "wrap_content"
+        android:layout_centerHorizontal = "true"
+        android:layout_alignParentBottom = "true"
+        android:onClick="guessCheck"
+        android:text = "Guess"
+        android:id="@+id/guessButton"
+        />
+
+</RelativeLayout>
